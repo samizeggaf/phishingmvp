@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="card">
+    <h1>About PhishGuard</h1>
+    <p>
+        PhishGuard is a simple phishing detection MVP built with Flask.
+        It analyzes URLs using common phishing indicators such as:
+    </p>
+
+    <ul>
+        <li>Suspicious keywords</li>
+        <li>IP-based domains</li>
+        <li>Too many subdomains</li>
+        <li>Long URLs or domains</li>
+        <li>Usage of '@' redirection</li>
+    </ul>
+
+    <p>This is the first version. Advanced AI/ML detection will be added later.</p>
+</div>
+
+{% endblock %}

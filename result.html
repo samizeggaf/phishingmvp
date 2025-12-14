@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="card">
+    <h1>Scan Result</h1>
+
+    <p><strong>URL:</strong> {{ url }}</p>
+    <p><strong>Risk Level:</strong> 
+        <span class="badge {{ analysis.risk_level|lower }}">{{ analysis.risk_level }}</span>
+    </p>
+
+    <h3>Details:</h3>
+
+    <ul>
+        <li>Risk Score: {{ analysis.risk_score }}/6</li>
+        <li>URL length: {{ analysis.url_length }}</li>
+        <li>Contains keywords: {{ analysis.keyword_hits | join(', ') if analysis.keyword_hits else 'None' }}</li>
+        <li>Is IP address: {{ analysis.is_ip }}</li>
+        <li>Too many subdomains: {{ analysis.too_many_subdomains }}</li>
+        <li>Contains @: {{ analysis.contains_at }}</li>
+    </ul>
+
+    <a href="/" class="btn">Scan another URL</a>
+</div>
+
+{% endblock %}

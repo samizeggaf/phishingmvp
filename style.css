@@ -1,0 +1,86 @@
+/* Light & Dark Mode */
+:root {
+    --bg: #f4f4f4;
+    --text: #222;
+    --card: #fff;
+    --accent: #007bff;
+}
+
+[data-theme="dark"] {
+    --bg: #0d1117;
+    --text: #e6e6e6;
+    --card: #161b22;
+    --accent: #00aaff;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background: var(--card);
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar a {
+    color: var(--text);
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+#theme-toggle {
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.card {
+    background: var(--card);
+    padding: 25px;
+    margin: 40px auto;
+    width: 450px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.15);
+}
+
+.center {
+    text-align: center;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+button, .btn {
+    background: var(--accent);
+    color: white;
+    padding: 12px;
+    border: none;
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+}
+
+.badge {
+    padding: 5px 10px;
+    border-radius: 6px;
+    color: white;
+}
+
+.badge.low { background: green; }
+.badge.medium { background: orange; }
+.badge.high { background: red; }

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="card center">
+    <h1>Phishing URL Scanner</h1>
+    <p>Check if a link is safe or suspicious.</p>
+
+    {% if error %}
+    <p class="error">{{ error }}</p>
+    {% endif %}
+
+    <form method="POST">
+        <input type="url" name="url" placeholder="https://example.com" required>
+        <button type="submit">Scan URL</button>
+    </form>
+</div>
+
+{% endblock %}
